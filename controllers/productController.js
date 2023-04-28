@@ -62,13 +62,13 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
 // Delete Product -- Admin
 
 exports.deleteProduct = catchAsyncErrors(async (req, res, next) => {
-    const product = await Product.findByIdAndDelete(req.params.id);
+    const product = await Product.findById(req.params.id);
 
     if (!product) {
         return next(new ErrorHandler("Product not found", 404));
     }
 
-    await product.remove();
+    await product.remove()
 
     res.status(200).json({
         success: true,

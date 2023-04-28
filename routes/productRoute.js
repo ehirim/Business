@@ -11,10 +11,8 @@ router.route("/products").get(getAllProducts);
 router.route("/product/new").post(createProduct);
 
 // Update / Delete Product --- Business
-router.route("/product/:id").put(updateProduct);
+router.route("/product/:id").put(updateProduct).delete(deleteProduct)
 
-// Delete Product -- Business
-router.route("/product/:id").delete(deleteProduct);
 
 // Get Product Details
 router.route("/product/:id").get(getProductDetails);
