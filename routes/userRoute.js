@@ -24,19 +24,19 @@ router.route("/signup").post(registerUser);
 
 router.route("/login").post(loginUser);
 
-router.route("/password/forgot").post(forgotPassword);
+// router.route("/password/forgot").post(forgotPassword);
 
 router.route("/password/reset/:token").put(resetPassword);
 
-router.route("/logout").get(logout);
+// router.route("/logout").get(logout);
 
 router.route("/me").get(isAuthenticatedUser, getUserDetails);
 
-router.route("/password/update").put(isAuthenticatedUser, updatePassword);
+// router.route("/password/update").put(isAuthenticatedUser, updatePassword);
 
-router.route("/me/update").put(isAuthenticatedUser, updateProfile);
+// router.route("/me/update").put(isAuthenticatedUser, updateProfile);
 
-router.route("/admin/users").get(isAuthenticatedUser, authorizeRoles("admin"), getAllUser);
+// router.route("/admin/users").get(isAuthenticatedUser, authorizeRoles("admin"), getAllUser);
 
 router
     .route("/admin/user/:id")
