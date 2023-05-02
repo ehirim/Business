@@ -69,7 +69,7 @@ const orderSchema = new mongoose.Schema({
             default:0
         },
         orderStatus:{
-            type:NString,
+            type:String,
             required: true,
             default:"Processing"
         },
@@ -83,4 +83,4 @@ const orderSchema = new mongoose.Schema({
 
 
 
-modules.exports = mongoose.model("Order", orderSchema);
+module.exports = mongoose.model("Order", orderSchema);
