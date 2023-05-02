@@ -19,6 +19,11 @@ const productSchema = new mongoose.Schema({
         required:[true, "Please enter a price"],
         maxLength: [7, "Price cannot exceed 7 characters"]
     },
+    user:{
+        type:mongoose.Schema.ObjectId,
+        ref:"User",
+        default:true,
+    },
     createdAt:{
         type:Date,
         default:Date.now
